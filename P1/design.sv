@@ -8,7 +8,7 @@ module synchronous_fifo #(parameter DEPTH=8, DATA_WIDTH=8) (
 );
   
   reg [$clog2(DEPTH)-1:0] w_ptr, r_ptr;
-  reg [DAT_WIDTH-1:0] fifo[DEPTH];
+  reg [DATA_WIDTH-1:0] fifo[DEPTH];
   
   always@(posedge clk) begin
     if(!rst_n) begin
